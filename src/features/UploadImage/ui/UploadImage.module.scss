@@ -1,0 +1,18 @@
+.button {
+  width: 45px;
+  height: 45px;
+
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.inputFileButton {
+  img {
+    cursor: pointer;
+  }
+}

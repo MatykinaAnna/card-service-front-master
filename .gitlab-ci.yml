@@ -1,0 +1,34 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - deploy
+
+variables:
+  PROJECT_VERSION: '1.0'
+  REGISTRY_URL: kuber-vrn-docker-registry.numedy.com:5000
+  IMAGE_NAME: $REGISTRY_URL/$CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME:$CI_COMMIT_BRANCH-$PROJECT_VERSION.$CI_PIPELINE_IID
+  GITLAB_AUTH_TOKEN: 'VqZhyUKxtjrEWmznJ2KY'
+
+build:
+  stage: build
+  script:
+    - echo "//${CI_SERVER_HOST}/api/v4/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+    - docker build -t $IMAGE_NAME .
+    - docker push $IMAGE_NAME
+  tags:
+    - builder-linux
+
+deploy:
+  # image: alpine:latest
+  stage: deploy
+  script:
+    - docker pull $IMAGE_NAME
+    - docker-compose up -d
+  only:
+    - master
+  tags:
+    - description_cards

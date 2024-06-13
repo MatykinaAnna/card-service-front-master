@@ -1,0 +1,144 @@
+@import '../../../shared/styles/variables.scss';
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  // pointer-events: none;
+  opacity: 0.33;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.body {
+  z-index: 200;
+  position: absolute;
+  height: 850px;
+  width: 885px;
+  background-color: $green-bg-2;
+  border-radius: $b-radius;
+  border: $green-main solid 1px;
+
+  top: 75px;
+  left: 430px;
+}
+
+.inputFile {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.wrapper_header {
+  display: grid;
+  grid-template-columns: 340px 120px 380px 25px;
+  align-items: center;
+
+  .add_btn {
+    width: 135px;
+    border: $green-main solid 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .del_btn {
+    width: 80px;
+    border: $green-main solid 1px;
+    cursor: pointer;
+    margin-left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .close_btn {
+    cursor: pointer;
+    display: flex;
+    margin-left: 5px;
+  }
+}
+
+.content {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 824px;
+  width: 885px;
+  display: flex;
+
+  .column_miniImg {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .active_wrapper_miniImg {
+    background-color: $green-main;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .wrapper_miniImg {
+    width: 150px;
+    height: 150px;
+    background-color: $green-bg-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .miniImg {
+    width: 120px;
+    height: 120px;
+    background-color: $green-bg-2;
+  }
+
+  .miniImg1000 {
+    width: 120px;
+    height: 120px;
+    background-image: url('../../../shared/icons/img1200.png');
+  }
+  .miniImg500 {
+    width: 120px;
+    height: 120px;
+    background-image: url('../../../shared/icons/img590.png');
+  }
+  .miniImg200 {
+    width: 120px;
+    height: 120px;
+    background-image: url('../../../shared/icons/img395.png');
+  }
+
+  .wrapper_maxImg {
+    height: 804px;
+    width: 680px;
+    margin-left: 35px;
+    background-color: $grey-txt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .maxImg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .maxImgEmpty {
+      width: 500px;
+      height: 500px;
+      background-color: white;
+    }
+
+    img {
+      max-width: 680px;
+      max-height: 803px;
+      // width: auto;
+      height: auto;
+    }
+  }
+}

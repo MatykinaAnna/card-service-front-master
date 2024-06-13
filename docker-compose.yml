@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  front:
+    image: ${IMAGE_NAME}
+    container_name: front
+    restart: "unless-stopped"
+    environment:
+        REACT_APP_DRUGS_API: $REACT_APP_DRUGS_API
+    ports:
+      - 3000:3000

@@ -1,0 +1,101 @@
+@import '../../../shared/styles/variables.scss';
+
+textarea#story {
+  // other stuff
+  -moz-appearance: none;
+  outline: 0px none transparent;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 952px 1fr;
+  gap: 2px;
+
+  cursor: pointer;
+
+  &.active {
+    .header {
+      color: #fff;
+      background-color: $green-main;
+    }
+    .content {
+      background-color: #fff;
+      border: 1px solid $grey-border;
+      padding: 0;
+    }
+  }
+}
+
+.header {
+  height: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: $green-bg-1;
+
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  min-height: 80px;
+  background-color: $green-bg-2;
+  padding: 2px 5px;
+  white-space: break-spaces;
+  font-size: 13px;
+}
+
+.col {
+  background-color: $green-bg-2;
+}
+
+.dropdown {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $green-bg-2;
+}
+.images {
+  // height: calc(100% - 35px);
+  padding-left: 10px;
+  //padding-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  background-color: $green-bg-2;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.textarea {
+  font-family: Arial;
+  font-size: 13px;
+
+  width: 100%;
+  height: 60px;
+
+  border: none;
+  resize: none;
+}
+
+.Dropdown_disabled {
+  font-size: 13px;
+  border: solid 0.5px rgb(182, 182, 182);
+  background-color: white;
+  width: 165px;
+  height: 20px;
+  color: grey;
+  padding-left: 4px;
+  padding-top: 1px;
+  box-sizing: border-box;
+}

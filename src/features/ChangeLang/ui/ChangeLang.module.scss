@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ref {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  cursor: pointer;
+}
+
+.main_flag {
+  height: 16px;
+}
+
+.arrow {
+  height: 18px;
+}
+
+.options {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #98c0f4;
+  width: 68px;
+  height: 63px;
+
+  top: 20px;
+  left: 0;
+
+  &_item {
+    font-size: 13px;
+    padding: 3px;
+    height: 21px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      background: #c0e1c6;
+    }
+  }
+}
+
+.mini_flag {
+  width: 16px;
+  height: 11px;
+}

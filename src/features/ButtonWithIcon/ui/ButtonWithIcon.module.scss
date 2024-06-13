@@ -1,0 +1,26 @@
+@import 'shared/styles/variables.scss';
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  flex: none;
+
+  svg,
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.toolTip {
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 2px;
+}

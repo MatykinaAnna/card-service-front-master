@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.toolTip {
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 2px;
+}
